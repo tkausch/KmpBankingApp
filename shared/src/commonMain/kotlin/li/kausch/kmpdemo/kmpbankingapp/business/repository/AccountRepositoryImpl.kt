@@ -3,9 +3,9 @@ package li.kausch.kmpdemo.kmpbankingapp.business.repository
 import li.kausch.kmpdemo.kmpbankingapp.business.model.Account
 import li.kausch.kmpdemo.kmpbankingapp.business.model.Transaction
 import li.kausch.kmpdemo.kmpbankingapp.business.model.TransactionType
-import li.kausch.kmpdemo.kmpbankingapp.service.BankingService
+import li.kausch.kmpdemo.kmpbankingapp.service.AccountService
 
-class AccountRepositoryImpl(private val service: BankingService) : AccountRepository {
+class AccountRepositoryImpl(private val service: AccountService) : AccountRepository {
     override suspend fun getAccount(accountId: String): Account {
         val dto = service.getAccount(accountId)
         return Account(

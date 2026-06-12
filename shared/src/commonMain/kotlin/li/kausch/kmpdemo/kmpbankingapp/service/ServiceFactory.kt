@@ -5,5 +5,5 @@ import li.kausch.kmpdemo.kmpbankingapp.service.mock.MockBankingService
 
 object ServiceFactory {
     val authService: AuthService = MockAuthService
-    val bankingService: BankingService = MockBankingService
+    val bankingService: AccountService = MockBankingService
 }
