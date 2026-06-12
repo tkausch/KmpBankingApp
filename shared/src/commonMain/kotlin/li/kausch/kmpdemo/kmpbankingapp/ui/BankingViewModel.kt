@@ -27,8 +27,8 @@ class BankingViewModel(private val repository: AccountRepository) : ViewModel() 
     private fun loadData() {
         viewModelScope.launch {
             try {
-                val account = repository.getAccount("acc-001")
-                val transactions = repository.getTransactions("acc-001")
+                val account = repository.getAccount()
+                val transactions = repository.getTransactions()
                 _uiState.value = BankingUiState.Success(account, transactions)
             } catch (e: Exception) {
                 _uiState.value = BankingUiState.Error(e.message ?: "Unknown error")

@@ -4,6 +4,6 @@ import li.kausch.kmpdemo.kmpbankingapp.service.model.AccountDto
 import li.kausch.kmpdemo.kmpbankingapp.service.model.TransactionDto
 
 interface AccountService {
-    suspend fun getAccount(accountId: String): AccountDto
-    suspend fun getTransactions(accountId: String): List<TransactionDto>
+    suspend fun getAccount(): AccountDto
+    suspend fun getTransactions(): List<TransactionDto>
 }

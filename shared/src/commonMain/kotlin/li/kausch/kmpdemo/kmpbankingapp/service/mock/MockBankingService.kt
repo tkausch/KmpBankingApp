@@ -5,7 +5,7 @@ import li.kausch.kmpdemo.kmpbankingapp.service.model.AccountDto
 import li.kausch.kmpdemo.kmpbankingapp.service.model.TransactionDto
 
 object MockBankingService : AccountService {
-    override suspend fun getAccount(accountId: String) = AccountDto(
+    override suspend fun getAccount() = AccountDto(
         id = "acc-001",
         accountNumber = "DE89 3704 0044 0532 0130 00",
         ownerName = "Thomas Kausch",
@@ -13,7 +13,7 @@ object MockBankingService : AccountService {
         currency = "EUR"
     )
 
-    override suspend fun getTransactions(accountId: String) = listOf(
+    override suspend fun getTransactions() = listOf(
         TransactionDto("t1", "Salary", 3500.00, "2026-06-01", "CREDIT"),
         TransactionDto("t2", "Rent", -1200.00, "2026-06-02", "DEBIT"),
         TransactionDto("t3", "Groceries", -85.50, "2026-06-05", "DEBIT"),
