@@ -10,7 +10,7 @@ fun Application.configureRouting() {
     routing {
         route("/api") {
             authRoutes()
-            authenticate("auth-bearer") {
+            authenticate("auth-jwt") {
                 accountRoutes()
             }
         }
