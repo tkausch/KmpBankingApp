@@ -12,12 +12,12 @@ class KtorAccountService(
     private val client: HttpClient,
     private val baseUrl: String
 ) : AccountService {
-    override suspend fun getAccount(accountId: String): AccountDto =
+    override suspend fun getAccount(): AccountDto =
         client.get("$baseUrl/api/account") {
             bearerAuth(SessionManager.token ?: error("Not authenticated"))
         }.body()
 
-    override suspend fun getTransactions(accountId: String): List<TransactionDto> =
+    override suspend fun getTransactions(): List<TransactionDto> =
         client.get("$baseUrl/api/account/transactions") {
             bearerAuth(SessionManager.token ?: error("Not authenticated"))
         }.body()

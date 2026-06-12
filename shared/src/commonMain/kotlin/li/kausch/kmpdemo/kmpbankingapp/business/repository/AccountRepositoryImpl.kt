@@ -6,8 +6,8 @@ import li.kausch.kmpdemo.kmpbankingapp.business.model.TransactionType
 import li.kausch.kmpdemo.kmpbankingapp.service.AccountService
 
 class AccountRepositoryImpl(private val service: AccountService) : AccountRepository {
-    override suspend fun getAccount(accountId: String): Account {
-        val dto = service.getAccount(accountId)
+    override suspend fun getAccount(): Account {
+        val dto = service.getAccount()
         return Account(
             id = dto.id,
             accountNumber = dto.accountNumber,
@@ -17,8 +17,8 @@ class AccountRepositoryImpl(private val service: AccountService) : AccountReposi
         )
     }
 
-    override suspend fun getTransactions(accountId: String): List<Transaction> =
-        service.getTransactions(accountId).map { dto ->
+    override suspend fun getTransactions(): List<Transaction> =
+        service.getTransactions().map { dto ->
             Transaction(
                 id = dto.id,
                 description = dto.description,
