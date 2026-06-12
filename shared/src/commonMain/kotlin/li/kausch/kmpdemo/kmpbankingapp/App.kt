@@ -9,16 +9,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import li.kausch.kmpdemo.kmpbankingapp.business.repository.AccountRepositoryImpl
 import li.kausch.kmpdemo.kmpbankingapp.business.repository.AuthRepositoryImpl
-import li.kausch.kmpdemo.kmpbankingapp.service.MockAuthService
-import li.kausch.kmpdemo.kmpbankingapp.service.MockBankingService
+import li.kausch.kmpdemo.kmpbankingapp.service.ServiceFactory
 import li.kausch.kmpdemo.kmpbankingapp.ui.BankingScreen
 import li.kausch.kmpdemo.kmpbankingapp.ui.LoginScreen
 
 @Composable
 @Preview
 fun App() {
-    val authRepository = AuthRepositoryImpl(MockAuthService)
-    val bankingRepository = AccountRepositoryImpl(MockBankingService)
+    val authRepository = AuthRepositoryImpl(ServiceFactory.authService)
+    val bankingRepository = AccountRepositoryImpl(ServiceFactory.bankingService)
     var isLoggedIn by remember { mutableStateOf(false) }
 
     MaterialTheme {
