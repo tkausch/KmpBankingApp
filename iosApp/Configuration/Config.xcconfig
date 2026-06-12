@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=kmpbankingapp
+PRODUCT_BUNDLE_IDENTIFIER=li.kausch.kmpdemo.kmpbankingapp.kmpbankingapp$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
