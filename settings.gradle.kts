@@ -29,5 +29,6 @@ dependencyResolutionManagement {
 }
 
 include(":androidApp")
+include(":shared-api")
 include(":shared")
 include(":server")
