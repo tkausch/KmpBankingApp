@@ -39,7 +39,7 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
         }
         commonMain.dependencies {
-            implementation(projects.sharedApi)
+            api(projects.sharedApi)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)
