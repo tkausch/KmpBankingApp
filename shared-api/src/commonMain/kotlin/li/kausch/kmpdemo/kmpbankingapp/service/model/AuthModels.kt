@@ -1,4 +1,4 @@
-package li.kausch.kmpdemo.kmpbankingapp.server.model
+package li.kausch.kmpdemo.kmpbankingapp.service.model
 
 import kotlinx.serialization.Serializable
 

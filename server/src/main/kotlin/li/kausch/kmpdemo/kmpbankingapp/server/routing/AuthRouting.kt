@@ -5,9 +5,9 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import li.kausch.kmpdemo.kmpbankingapp.server.auth.TokenStore
-import li.kausch.kmpdemo.kmpbankingapp.server.model.ErrorResponse
-import li.kausch.kmpdemo.kmpbankingapp.server.model.LoginRequest
-import li.kausch.kmpdemo.kmpbankingapp.server.model.LoginResponse
+import li.kausch.kmpdemo.kmpbankingapp.service.model.ErrorResponse
+import li.kausch.kmpdemo.kmpbankingapp.service.model.LoginRequest
+import li.kausch.kmpdemo.kmpbankingapp.service.model.LoginResponse
 
 fun Route.authRoutes() {
     post("/auth/login") {
