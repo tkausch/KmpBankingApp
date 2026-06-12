@@ -10,7 +10,7 @@ import li.kausch.kmpdemo.kmpbankingapp.ui.BankingScreen
 @Composable
 @Preview
 fun App() {
-    val repository = AccountRepositoryImpl(MockBankingService())
+    val repository = AccountRepositoryImpl(MockBankingService)
     MaterialTheme {
         BankingScreen(repository)
     }

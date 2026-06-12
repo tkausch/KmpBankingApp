@@ -3,7 +3,7 @@ package li.kausch.kmpdemo.kmpbankingapp.service
 import li.kausch.kmpdemo.kmpbankingapp.service.model.AccountDto
 import li.kausch.kmpdemo.kmpbankingapp.service.model.TransactionDto
 
-class MockBankingService : BankingService {
+object MockBankingService : BankingService {
     override suspend fun getAccount(accountId: String) = AccountDto(
         id = "acc-001",
         accountNumber = "DE89 3704 0044 0532 0130 00",
