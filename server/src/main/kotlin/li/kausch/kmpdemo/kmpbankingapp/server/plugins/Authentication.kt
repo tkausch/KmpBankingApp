@@ -8,7 +8,7 @@ fun Application.configureAuthentication() {
     install(Authentication) {
         bearer("auth-bearer") {
             authenticate { credential ->
-                if (TokenStore.isValid(credential.token)) UserIdPrincipal("user") else null
+                TokenStore.getUsername(credential.token)?.let { UserIdPrincipal(it) }
             }
         }
     }
