@@ -1,5 +1,6 @@
-package li.kausch.kmpdemo.kmpbankingapp.service
+package li.kausch.kmpdemo.kmpbankingapp.service.mock
 
+import li.kausch.kmpdemo.kmpbankingapp.service.BankingService
 import li.kausch.kmpdemo.kmpbankingapp.service.model.AccountDto
 import li.kausch.kmpdemo.kmpbankingapp.service.model.TransactionDto
 
