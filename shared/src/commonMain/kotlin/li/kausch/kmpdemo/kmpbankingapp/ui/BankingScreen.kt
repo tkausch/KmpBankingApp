@@ -30,12 +30,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import li.kausch.kmpdemo.kmpbankingapp.business.model.Account
 import li.kausch.kmpdemo.kmpbankingapp.business.model.Transaction
 import li.kausch.kmpdemo.kmpbankingapp.business.model.TransactionType
-import li.kausch.kmpdemo.kmpbankingapp.business.repository.AccountRepositoryImpl
-import li.kausch.kmpdemo.kmpbankingapp.service.MockBankingService
+import li.kausch.kmpdemo.kmpbankingapp.business.repository.AccountRepository
 
 @Composable
-fun BankingScreen() {
-    val viewModel = viewModel { BankingViewModel(AccountRepositoryImpl(MockBankingService())) }
+fun BankingScreen(repository: AccountRepository) {
+    val viewModel = viewModel { BankingViewModel(repository) }
     val uiState by viewModel.uiState.collectAsState()
 
     when (val state = uiState) {
